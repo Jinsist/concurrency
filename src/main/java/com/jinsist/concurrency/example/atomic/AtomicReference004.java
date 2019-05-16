@@ -1,4 +1,4 @@
-package com.jinsist.concurrency.example;
+package com.jinsist.concurrency.example.atomic;
 
 import com.jinsist.concurrency.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 @Slf4j
 @ThreadSafe
-public class AtomicExample4 {
+public class AtomicReference004 {
 
     private static AtomicReference<Integer> count = new AtomicReference<>(0);
 

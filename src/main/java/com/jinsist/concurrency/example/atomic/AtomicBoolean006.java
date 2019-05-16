@@ -1,4 +1,4 @@
-package com.jinsist.concurrency.example;
+package com.jinsist.concurrency.example.atomic;
 
 import com.jinsist.concurrency.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 @Slf4j
 @ThreadSafe
-public class AtomicExample6 {
+public class AtomicBoolean006 {
     // 请求总数
     public static int clientTotal = 5000;
 

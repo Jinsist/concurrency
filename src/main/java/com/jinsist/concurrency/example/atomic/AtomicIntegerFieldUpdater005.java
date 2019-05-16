@@ -1,4 +1,4 @@
-package com.jinsist.concurrency.example;
+package com.jinsist.concurrency.example.atomic;
 
 import com.jinsist.concurrency.annoations.ThreadSafe;
 import lombok.Getter;
