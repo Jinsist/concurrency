@@ -8,9 +8,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
+/**
+ * volatile可见性，但不保证原子性
+ * @author Jinsist
+ */
 @Slf4j
 @NotThreadSafe
-public class CountExample2 {
+public class CountExample4 {
 
     // 请求总数
     public static int clientTotal = 5000;
@@ -18,7 +22,7 @@ public class CountExample2 {
     // 同时并发执行的线程数
     public static int threadTotal = 200;
 
-    public static int count = 0;
+    public static volatile int count = 0;
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
