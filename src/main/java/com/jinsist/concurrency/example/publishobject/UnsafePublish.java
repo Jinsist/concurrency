@@ -9,6 +9,7 @@ import java.util.Arrays;
 @NotThreadSafe
 public class UnsafePublish {
 
+    // 若固定数据请不要使其能对该数据更改。
     private String[] states = { "a", "b", "c"};
 
     // 任何线程访问可以对该发布对象数据修改，线程不安全
