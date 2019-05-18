@@ -3,6 +3,7 @@ package com.jinsist.concurrency;
 
 import com.jinsist.concurrency.example.sync.Student;
 import com.jinsist.concurrency.example.sync.TestEntity;
+import com.jinsist.concurrency.example.threadLocal.RequestHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,7 @@ public class TestController {
         testEntity.test002(stu);
         return "test";
     }
+
     @RequestMapping("/test003")
     public String test003(String name) {
         TestEntity testEntity = new TestEntity();
@@ -31,5 +33,11 @@ public class TestController {
         stu.setName(name);
         testEntity.test002(stu);
         return "test";
+    }
+
+    @RequestMapping("/threadLocal")
+    public Long threadLocalTest() {
+        log.info("{}", RequestHolder.getId());
+        return RequestHolder.getId();
     }
 }
